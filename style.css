@@ -2,10 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }  
+}
 
-header{
-    background-color: rgb(255, 4, 88);
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgb(240, 68, 68);
     color: white;
     padding: 1rem;
     text-align: center;
@@ -13,7 +17,7 @@ header{
 }
 
 .logo {
-    background-color: rgb(255, 4, 88);
+    background-color: rgb(240, 68, 68);
     margin: 0;
     padding: 1rem;
     width: 100%;
@@ -26,7 +30,7 @@ header{
 
 .logo a {
     text-decoration: none;
-    font-weight:700;
+    font-weight: 700;
     font-size: medium;
     color: white;
     position: relative;
@@ -42,4 +46,25 @@ header{
 
 .logo a:focus {
     color: yellow;
+}
+
+.Welcome {
+    background-color: #4ECDC4;
+    padding: 130px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
+.Welcome h1 {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -25px; /* Adjusted to add space between elements */
+}
+
+.h1_Welcome {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
 }
