@@ -8,21 +8,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo">
                 <h4>FitTrack</h4>
-                <a href="#Features">Features</a>
-                <a href="#About">About</a>
-                <a href="#Contact">Contact</a>
+                <div class="nav-links">
+                    <a href="#Features">Features</a>
+                    <a href="#About">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="login.html">Login</a>
+                </div>
             </div>
         </nav>
     </header>
+
+    <!-- Welcome Section -->
     <section class="Welcome"> 
-            <h1 class="h1_Welcome">Welcome to FitTrack</h1>
-            <p>Your personal fitness companion. Track workouts, set goals, and achieve results.</p>
-            <a href="#Features" class="cta-button">Get Started</a>
+        <h1 class="h1_Welcome">Welcome to FitTrack</h1>
+        <p>Your personal fitness companion. Track workouts, set goals, and achieve results.</p>
+        <a href="#sign-up" class="cta-button">Get Started</a>
     </section>
+
+    <!-- Features Section -->
     <section id="Features" class="About">
         <h1 id="h1-about">Why Choose FitTrack?</h1>
         <div class="wcf-buttons-container">
@@ -30,22 +38,43 @@
                 <span class="about-title">Track Workouts</span>
                 <span class="about-description">Log your exercises and monitor progress.</span>
             </a>
-            <a href="#about" class="wcf-button2">
-                <span class="about-title2">Set Goals</span>
-                <span class="about-description2">Create personalized goals and stay motivated.</span>
+            <a href="#about" class="wcf-button">
+                <span class="about-title">Set Goals</span>
+                <span class="about-description">Create personalized goals and stay motivated.</span>
             </a>
-            <a href="#about" class="wcf-button3">
-                <span class="about-title3">Analyze Progress</span>
-                <span class="about-description3">Get insights to improve performance.</span>
+            <a href="#about" class="wcf-button">
+                <span class="about-title">Analyze Progress</span>
+                <span class="about-description">Get insights to improve performance.</span>
             </a>
         </div>
     </section>
+
+    <!-- Sign Up Section -->
+    <section id="sign-up" class="sign-up-section">
+        <h2>Sign Up</h2>
+        <form id="registration-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="cta-button">Register</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
     <footer id="Contact" class="footer-1">
         <div class="contact-container">
             <span class="contact-icon">📞</span>
-            <span class="contact-text"><a href="#Contact">Contact</a></span>
+            <span class="contact-text"><a href="contact.html">Contact</a></span>
         </div>
         <p>All rights reserved 2025</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

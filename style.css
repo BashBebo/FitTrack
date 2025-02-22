@@ -1,259 +1,274 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Smooth Scrolling */
 html {
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: rgb(240, 68, 68);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    position: fixed; /* Make the header fixed */
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Ensure the header stays on top */
-}
-
+/* Body Styling */
 body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
     padding-top: 70px; /* Add padding to avoid content being hidden behind the fixed header */
 }
 
-.logo {
-    background-color: rgb(240, 68, 68);
-    margin: 0;
+/* Header Styling */
+header {
+    background-color: #2c3e50; /* Dark blue-gray for contrast */
+    color: #fff;
     padding: 1rem;
+    position: fixed;
     width: 100%;
-    box-sizing: border-box;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header .logo {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    font-size: large;
 }
 
-.logo a {
+header .logo h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f04444; /* Red accent for branding */
+}
+
+header .nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+header .nav-links a {
+    color: #fff; /* White text for links */
     text-decoration: none;
-    font-weight: 700;
-    font-size: medium;
-    color: white;
-    position: relative;
-    margin-right: -15px; /* Adjust spacing between links */
-    left: 1400px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.logo a:hover {
-    color: #FFE66D;
-    transform: scale(1.1);
+header .nav-links a:hover {
+    color: #f04444; /* Red accent on hover */
 }
 
-.logo a:focus {
-    color: yellow;
-}
-
-.Welcome {
-    background-color: #4ECDC4;
-    padding: 130px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    justify-content: center;
-}
-
-.Welcome h1 {
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-    font-family: 'Open Sans', sans-serif;
-    margin-top: -25px; /* Adjusted to add space between elements */
-}
-
-.h1_Welcome {
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 3rem;
-    
-}
-
-p {
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 1rem;
-}
-
-.cta-button { 
-    background: #ffd500; 
-    color: black;
-    padding: 0.75rem 1.5rem; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
+/* Buttons */
+.cta-button {
+    background-color: #f04444; /* Red accent for CTA */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: none;
 }
 
 .cta-button:hover {
-    transform: scale(1.1);
-    background: #ffd500;
+    background-color: #d03434; /* Darker red on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Forms */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 2rem;
+    background-color: #fff; /* White background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #f04444; /* Highlight border on focus */
+    outline: none;
+}
+
+/* Sections */
+section {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.Welcome {
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.h1_Welcome {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333; /* Dark text for headings */
+}
+
+.Welcome p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666; /* Slightly lighter text for descriptions */
 }
 
 .About {
-    background-color: #e0e0e0;
-    padding: 130px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    justify-content: center;
+    background-color: #f9f9f9; /* Light gray background */
 }
 
 #h1-about {
     font-size: 2rem;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 100px;
-    position: relative;
-    top: -150px;
+    margin-bottom: 2rem;
+    color: #333; /* Dark text for headings */
 }
 
 .wcf-buttons-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items at the start of the container */
-    flex-wrap: wrap; /* Allow wrapping if needed */
-    gap: 10px; /* Add gap between buttons */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.wcf-button, .wcf-button2, .wcf-button3 {
-    background: #ffffff;
-    color: black;
-    padding: 20px; /* Consistent padding */
-    width: 350px;
-    height: 400px; /* Consistent height */
-    border-radius: 5px;
+.wcf-button {
+    background-color: #ffffff; /* White background for cards */
+    color: #333;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px; /* Add margin to create a gap */
-    outline: 2px solid #000; /* Add outline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.wcf-button:hover, .wcf-button2:hover, .wcf-button3:hover {
+.wcf-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); /* Increase glow effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
 }
 
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 2px solid #000; /* Add border to container */
-    border-radius: 5px;
-    margin: 10px; /* Add margin to create a gap */
-    background: #ffffff;
-}
-
-.about-title, .about-title2, .about-title3 {
+.about-title {
     font-size: 1.5rem;
-    color: rgb(0, 0, 0);
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 1.5rem; /* Increase margin for better spacing */
-    text-align: center; /* Center align titles */
-}
-
-.about-description, .about-description2, .about-description3 {
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-    font-family: 'Open Sans', sans-serif;
     margin-bottom: 1rem;
-    text-align: center; /* Center align descriptions */
+    color: #333; /* Dark text for titles */
 }
 
-footer {
-    background-color: #333; /* Dark grey background */
-    padding: 20px;
-    text-align: right; /* Right-align text */
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.about-description {
+    font-size: 1rem;
+    color: #666; /* Slightly lighter text for descriptions */
 }
 
-footer p {
-    margin: 0;
-    color: #fff; /* White text color */
+/* Dashboard */
+.dashboard {
+    padding: 2rem;
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
 }
 
-footer a {
-    color: #fff; /* White text color for links */
-    text-decoration: none;
-    margin-left: 10px;
+.dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333; /* Dark text for headings */
 }
 
-footer a:hover {
-    color: #ffd500; /* Change color on hover */
+.tracker-section {
+    margin-bottom: 2rem;
 }
 
+.saved-workouts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.saved-workouts li {
+    background-color: #f9f9f9; /* Light gray background for list items */
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Footer */
 footer.footer-1 {
-    background-color: #333; /* Dark grey background */
-    padding: 60px; /* Increase padding to make the footer bigger */
-    text-align: center; /* Center-align text */
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: #2c3e50; /* Dark blue-gray for contrast */
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
 }
 
 footer.footer-1 .contact-container {
-    margin-bottom: 20px; /* Add margin below the contact container */
+    margin-bottom: 1rem;
 }
 
 footer.footer-1 .contact-icon {
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: middle;
+    font-size: 1.5rem;
+    color: #f04444; /* Red accent for icon */
 }
 
-footer.footer-1 .contact-text {
-    display: inline-block;
-    vertical-align: middle;
-    color: #fff; /* White text color for contact text */
+footer.footer-1 .contact-text a {
+    color: #fff; /* White text for link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer.footer-1 .contact-text a:hover {
+    color: #f04444; /* Red accent on hover */
 }
 
 footer.footer-1 p {
     margin: 0;
-    color: #bbb; /* Lighter text color for "All rights reserved" */
+    color: #fff; /* White text for copyright */
 }
 
-footer.footer-1 a {
-    color: #fff; /* White text color for links */
-    text-decoration: none;
-    margin-left: 10px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-footer.footer-1 a:hover {
-    color: #ffd500; /* Change color on hover */
-}
+    header .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-footer.footer-1 .contact-icon {
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: middle;
-}
+    .Welcome {
+        padding: 2rem 1rem;
+    }
 
-footer.footer-1 .contact-text {
-    display: inline-block;
-    vertical-align: middle;
-    color: #fff; /* White text color for contact text */
+    .h1_Welcome {
+        font-size: 2rem;
+    }
+
+    .About {
+        padding: 2rem 1rem;
+    }
+
+    .wcf-button {
+        width: 100%;
+    }
 }
