@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 header {
@@ -14,6 +14,14 @@ header {
     padding: 1rem;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    position: fixed; /* Make the header fixed */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure the header stays on top */
+}
+
+body {
+    padding-top: 70px; /* Add padding to avoid content being hidden behind the fixed header */
 }
 
 .logo {
@@ -109,17 +117,143 @@ p {
     font-family: 'Open Sans', sans-serif;
     margin-top: 100px;
     position: relative;
-    top: -200px;
+    top: -150px;
 }
 
-.wcf-button {
-    background: #ffffff; 
+.wcf-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the start of the container */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 10px; /* Add gap between buttons */
+}
+
+.wcf-button, .wcf-button2, .wcf-button3 {
+    background: #ffffff;
     color: black;
-    padding: 100px;
-    border-radius: 5px; 
-    text-decoration: none; 
-    font-weight: bold; 
+    padding: 20px; /* Consistent padding */
+    width: 350px;
+    height: 400px; /* Consistent height */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px; /* Add margin to create a gap */
+    outline: 2px solid #000; /* Add outline */
+}
+
+.wcf-button:hover, .wcf-button2:hover, .wcf-button3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); /* Increase glow effect */
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #000; /* Add border to container */
+    border-radius: 5px;
+    margin: 10px; /* Add margin to create a gap */
+    background: #ffffff;
+}
+
+.about-title, .about-title2, .about-title3 {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1.5rem; /* Increase margin for better spacing */
+    text-align: center; /* Center align titles */
+}
+
+.about-description, .about-description2, .about-description3 {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1rem;
+    text-align: center; /* Center align descriptions */
+}
+
+footer {
+    background-color: #333; /* Dark grey background */
+    padding: 20px;
+    text-align: right; /* Right-align text */
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #fff; /* White text color */
+}
+
+footer a {
+    color: #fff; /* White text color for links */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    color: #ffd500; /* Change color on hover */
+}
+
+footer.footer-1 {
+    background-color: #333; /* Dark grey background */
+    padding: 60px; /* Increase padding to make the footer bigger */
+    text-align: center; /* Center-align text */
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer.footer-1 .contact-container {
+    margin-bottom: 20px; /* Add margin below the contact container */
+}
+
+footer.footer-1 .contact-icon {
     display: inline-block;
-    rotate: 0deg;
-    transition: transform 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer.footer-1 .contact-text {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff; /* White text color for contact text */
+}
+
+footer.footer-1 p {
+    margin: 0;
+    color: #bbb; /* Lighter text color for "All rights reserved" */
+}
+
+footer.footer-1 a {
+    color: #fff; /* White text color for links */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer.footer-1 a:hover {
+    color: #ffd500; /* Change color on hover */
+}
+
+footer.footer-1 .contact-icon {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+footer.footer-1 .contact-text {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff; /* White text color for contact text */
 }
